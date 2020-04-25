@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img [src]="news.imagem" style="max-width: 225px; margin: 0 auto;">
+    <ion-card-header>
+        <ion-card-title>{{news.titulo}}</ion-card-title>
+      </ion-card-header>
+    <ion-card-content>
+      {{news.texto}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

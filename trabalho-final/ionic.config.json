@@ -1,0 +1,7 @@
+{
+  "name": "trabalho_final",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

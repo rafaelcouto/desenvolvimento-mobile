@@ -1,0 +1,7 @@
+{
+  "name": "swapi",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

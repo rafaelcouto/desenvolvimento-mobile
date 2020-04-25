@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Native
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Camera</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-button (click)="tirarFoto()">
+        <ion-icon name="camera"></ion-icon> &nbsp; Tirar uma foto
+      </ion-button>
+
+      <img *ngIf="imagem" [src]="imagem">
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Lanterna</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-button color="warning" (click)="acenderLanterna()">
+        <ion-icon name="sunny"></ion-icon> &nbsp; Acender lanterna
+      </ion-button>
+
+      <ion-button color="dark" (click)="apagarLanterna()">
+          <ion-icon name="sunny"></ion-icon> &nbsp; Apagar lanterna
+        </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center">
+      Calculadora
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div style="max-width: 180px; margin: 0 auto">
+
+    <div>
+
+      <div style="color: #666; font-size: 12px; margin-top: 10px; text-align: right">
+        {{numeroAnterior}} {{operacaoAtual}}
+      </div>
+
+      <div style="height: 50px; margin-top: 10px; font-size: 20px; text-align: right">
+          <strong>{{numeroAtual}}</strong>
+      </div>
+
+      <ion-button color="primary" *ngFor="let numero of numeros" (click)="definirNumero(numero)">
+        {{numero}}
+      </ion-button>
+
+      <ion-button color="warning" (click)="definirSeparador()">,</ion-button>
+      <ion-button color="success" (click)="calcular()">=</ion-button>
+
+    </div>
+
+    <div>
+
+      <ion-button color="secondary" *ngFor="let operacao of operacoes" (click)="definirOperacao(operacao)">
+        {{operacao}}
+      </ion-button>
+
+      <ion-button color="danger" (click)="limpar()">C</ion-button>
+
+    </div>
+
+  </div>
+
+</ion-content>

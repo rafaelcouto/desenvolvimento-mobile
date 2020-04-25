@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Dados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ul>
+    <li><strong>Nome:</strong> {{ pessoa.nome }}</li>
+    <li><strong>Idade:</strong> {{ pessoa.idade }} anos</li>
+    <li><strong>Email:</strong> {{ pessoa.email }}</li>
+    <li><strong>Telefone:</strong> {{ pessoa.telefone }}</li>
+  </ul>
+
+  <div>
+    <label>Nome
+      <input [(ngModel)]="pessoa.nome" placeholder="name"/>
+    </label>
+  </div>
+
+</ion-content>

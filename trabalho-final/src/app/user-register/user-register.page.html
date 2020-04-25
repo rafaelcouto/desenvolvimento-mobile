@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Novo usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-fab vertical="top" horizontal="end" edge slot="fixed">
+    <ion-fab-button color="primary" (click)="dismiss()">
+      <ion-icon name="close"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <form (ngSubmit)="register()">
+
+    <ion-item>
+      <ion-label>Nome</ion-label>
+      <ion-input name="name" type="text" [(ngModel)]="user.name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input name="email" type="email" [(ngModel)]="user.email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Senha</ion-label>
+      <ion-input name="password" type="password" [(ngModel)]="user.password" required></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" size="large" expand="block" color="success">Registrar</ion-button>
+
+  </form>
+
+</ion-content>

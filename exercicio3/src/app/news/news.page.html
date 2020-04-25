@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Notícias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <h1>Nova notícia</h1>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Texto</ion-label>
+    <ion-input type="text" [(ngModel)]="noticia.titulo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Título</ion-label>
+    <ion-input type="text" [(ngModel)]="noticia.texto"></ion-input>
+  </ion-item>
+
+  <div class="ion-padding">
+    <ion-button expand="block" type="submit" class="ion-no-margin" (click)="incluirNoticia()">Incluir</ion-button>
+  </div>
+
+  <ion-item-divider></ion-item-divider>
+
+  <ion-card color="dark" *ngFor="let noticia of noticias">
+    <ion-card-header>
+      <ion-card-title>{{noticia.titulo}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{noticia.texto}}
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

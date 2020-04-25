@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ isUpdating() ? 'Editar' : 'Novo' }} contato</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-fab vertical="top" horizontal="end" edge slot="fixed">
+        <ion-fab-button color="primary" (click)="dismiss()">
+          <ion-icon name="close"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+
+  <form (ngSubmit)="save()">
+
+    <ion-item>
+      <ion-label>Nome</ion-label>
+      <ion-input name="name" type="text" [(ngModel)]="contact.name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sobrenome</ion-label>
+      <ion-input name="last_name" type="text" [(ngModel)]="contact.lastName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input name="email" type="email" [(ngModel)]="contact.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Instituição</ion-label>
+      <ion-input name="institution" type="text" [(ngModel)]="contact.institution"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Data de nascimento</ion-label>
+      <ion-input name="date_of_birth" type="text" [(ngModel)]="contact.dateOfBirth"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" size="large" expand="block">Salvar</ion-button>
+
+  </form>
+
+  <ion-button type="submit" size="large" expand="block" color="danger" [hidden]="!isUpdating()" (click)="delete()">Excluir</ion-button>
+
+</ion-content>
